@@ -1,15 +1,27 @@
 [versions]
 alchemist = "17.0.4"
 kotlin = "1.6.21"
+scala = "2.13.8"
+scalaMajor = "2.13"
+scafi = "0.3.3"
+scalacache = "0.28.0"
 
 [libraries]
+resourceloader = "org.danilopianini:thread-inheritable-resource-loader:0.3.5"
+scalacache-core = { module = "com.github.cb372:scalacache-core_2.13", version.ref = "scalacache" }
+scalacache-guava = { module = "com.github.cb372:scalacache-guava_2.13", version.ref = "scalacache" }
+scafi = { module = "it.unibo.scafi:scafi-core_2.13", version.ref = "scafi" }
 alchemist = { module = "it.unibo.alchemist:alchemist", version.ref = "alchemist" }
+scala-compiler = { module = "org.scala-lang:scala-compiler", version.ref = "scala" }
+scala-library = { module = "org.scala-lang:scala-library", version.ref = "scala" }
 alchemist-protelis = { module = "it.unibo.alchemist:alchemist-incarnation-protelis", version.ref = "alchemist" }
-alchemist-scafi = { module = "it.unibo.alchemist:alchemist-incarnation-scafi", version.ref = "alchemist" }
+alchemist-geometry = { module = "it.unibo.alchemist:alchemist-euclidean-geometry", version.ref = "alchemist"}
+
 
 [bundles]
-alchemist-protelis = [ "alchemist", "alchemist-protelis" ]
-
+alchemist-protelis = [ "alchemist", "alchemist-protelis", "alchemist-geometry" ]
+scalacache = [ "scalacache-core", "scalacache-guava" ]
+scala = [ "scala-compiler", "scala-library"]
 [plugins]
 gitSemVer = { id = "org.danilopianini.git-sensitive-semantic-versioning", version = "0.3.0" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

@@ -8,8 +8,8 @@ plugins {
     alias(libs.plugins.kotlin.qa)
     alias(libs.plugins.multiJvmTesting)
     alias(libs.plugins.taskTree)
+    scala
 }
-
 repositories {
     mavenCentral()
 }
@@ -42,6 +42,11 @@ dependencies {
     if (!GraphicsEnvironment.isHeadless()) {
         implementation("it.unibo.alchemist:alchemist-swingui:${libs.versions.alchemist.get()}")
     }
+    // Scala Deps
+    implementation(libs.bundles.scala)
+    implementation(libs.resourceloader)
+    implementation(libs.scafi)
+    implementation(libs.bundles.scalacache)
 }
 
 // Heap size estimation for batches
