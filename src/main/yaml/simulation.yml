@@ -6,7 +6,7 @@ variables:
   test1: &test1
     language: scala
     formula: > 
-      new it.unibo.alchemist.model.implementations.actions.QBasedScheduling("src/main/resources/q-other.json")
+      new it.unibo.alchemist.model.implementations.actions.QBasedScheduling("src/main/resources/q-multi.json")
 
 network-model:
   type: ConnectWithinDistance
