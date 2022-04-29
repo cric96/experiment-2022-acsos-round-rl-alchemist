@@ -3,6 +3,11 @@ variables:
   test: &test
     language: scala
     formula: "new it.unibo.alchemist.model.implementations.actions.RandomlyNotExecute()"
+  test1: &test1
+    language: scala
+    formula: > 
+      new it.unibo.alchemist.model.implementations.actions.QBasedScheduling("src/main/resources/q-other.json")
+
 network-model:
   type: ConnectWithinDistance
   parameters: [0.5]
@@ -12,7 +17,7 @@ _gradient: &gradient
     type: Event
     actions:
       - type: RunScafiProgram
-        parameters: [ it.unibo.scafi.BaseProgram, 1000, *test ]
+        parameters: [ it.unibo.scafi.BaseProgram, 1000, *test1 ]
   - program: send
 
 deployments:

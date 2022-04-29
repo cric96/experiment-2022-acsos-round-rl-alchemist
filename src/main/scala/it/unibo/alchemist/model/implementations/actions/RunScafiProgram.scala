@@ -149,7 +149,7 @@ sealed class RunScafiProgram[T, P <: Position[P]](
         case _ => localSensors.get(lsns)
       }).map(_.asInstanceOf[T])
     }
-    scheduling.eval(ctx) {
+    scheduling.eval(ctx, new SimpleNodeManager(node)) {
       val computed = program(ctx)
       node.setConcentration(programName, computed.root[T]())
       val toSend = NBRData(computed, position, alchemistCurrentTime)

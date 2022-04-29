@@ -5,6 +5,8 @@ scala = "2.13.8"
 scalaMajor = "2.13"
 scafi = "0.3.3"
 scalacache = "0.28.0"
+upickle = "1.4.3"
+oslib = "0.8.0"
 
 [libraries]
 resourceloader = "org.danilopianini:thread-inheritable-resource-loader:0.3.5"
@@ -16,12 +18,13 @@ scala-compiler = { module = "org.scala-lang:scala-compiler", version.ref = "scal
 scala-library = { module = "org.scala-lang:scala-library", version.ref = "scala" }
 alchemist-protelis = { module = "it.unibo.alchemist:alchemist-incarnation-protelis", version.ref = "alchemist" }
 alchemist-geometry = { module = "it.unibo.alchemist:alchemist-euclidean-geometry", version.ref = "alchemist"}
-
-
+upickle = { module = "com.lihaoyi:upickle_2.13", version.ref = "upickle" }
+oslib = { module = "com.lihaoyi:os-lib_2.13", version.ref = "oslib"}
 [bundles]
 alchemist-protelis = [ "alchemist", "alchemist-protelis", "alchemist-geometry" ]
 scalacache = [ "scalacache-core", "scalacache-guava" ]
 scala = [ "scala-compiler", "scala-library"]
+
 [plugins]
 gitSemVer = { id = "org.danilopianini.git-sensitive-semantic-versioning", version = "0.3.0" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

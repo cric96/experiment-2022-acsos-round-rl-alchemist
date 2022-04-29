@@ -39,12 +39,13 @@ multiJvm {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(libs.bundles.alchemist.protelis)
-    if (!GraphicsEnvironment.isHeadless()) {
-        implementation("it.unibo.alchemist:alchemist-swingui:${libs.versions.alchemist.get()}")
-    }
+    implementation("it.unibo.alchemist:alchemist-swingui:${libs.versions.alchemist.get()}")
+
     // Scala Deps
     implementation(libs.bundles.scala)
     implementation(libs.resourceloader)
+    implementation(libs.upickle)
+    implementation(libs.oslib)
     implementation(libs.scafi)
     implementation(libs.bundles.scalacache)
 }
