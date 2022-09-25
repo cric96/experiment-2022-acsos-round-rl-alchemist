@@ -5,7 +5,7 @@ scala = "2.13.9"
 scalaMajor = "2.13"
 scafi = "0.3.3"
 scalacache = "0.28.0"
-upickle = "1.4.4"
+upickle = "1.6.0"
 oslib = "0.8.1"
 
 [libraries]
