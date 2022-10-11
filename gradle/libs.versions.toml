@@ -1,7 +1,7 @@
 [versions]
 alchemist = "24.1.10"
 kotlin = "1.7.20"
-scala = "2.13.9"
+scala = "2.13.10"
 scalaMajor = "2.13"
 scafi = "1.1.6"
 scalacache = "0.28.0"
