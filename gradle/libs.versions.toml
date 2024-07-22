@@ -9,7 +9,7 @@ upickle = "2.0.0"
 oslib = "0.8.1"
 
 [libraries]
-resourceloader = "org.danilopianini:thread-inheritable-resource-loader:0.3.5"
+resourceloader = "org.danilopianini:thread-inheritable-resource-loader:0.3.7"
 scalacache-core = { module = "com.github.cb372:scalacache-core_2.13", version.ref = "scalacache" }
 scalacache-guava = { module = "com.github.cb372:scalacache-guava_2.13", version.ref = "scalacache" }
 scafi = { module = "it.unibo.scafi:scafi-core_2.13", version.ref = "scafi" }
